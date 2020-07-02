@@ -27,7 +27,7 @@ foreach my $rtn_line (sort @rtn_lines) {
 
 	print "Jobs:\n";
 
-	my $cmd_out = `squeue -h -u $user --format="%u %A %N %T %P %b %p %Q"`;
+	my $cmd_out = `squeue -h -u $user --format="%u %A %N %T %P %b %p %Q %j"`;
 
 	my @cmd_out_lines = split(/\n/, $cmd_out);
 
